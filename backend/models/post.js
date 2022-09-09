@@ -22,6 +22,7 @@ const postSchema = mongoose.Schema(
       type: String,
       required: true,
       trim: true,
+      unique: true,
     },
     author: {
       type: String,
@@ -43,5 +44,4 @@ const postSchema = mongoose.Schema(
   }
 );
 
-
-module.exports = mongoose.model('Post', postSchema)
+module.exports = mongoose.model("Post", postSchema);
