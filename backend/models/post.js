@@ -31,7 +31,6 @@ const postSchema = mongoose.Schema(
       type: Object,
       url: {
         type: URL,
-        required: true,
       },
       public_id: {
         type: String,
