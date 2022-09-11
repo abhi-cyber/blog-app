@@ -16,7 +16,12 @@ const addToFeaturedPost = async (postId) => {
 
 exports.createPost = async (req, res) => {
   const { title, meta, content, slug, author, tags, featured } = req.body;
+  const {file} = req;
   const newPost = new Post({ title, meta, content, slug, author, tags });
+  
+  // if (file) {
+
+  // }
 
   await newPost.save();
 
