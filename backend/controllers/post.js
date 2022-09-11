@@ -5,6 +5,5 @@ exports.createPost = async (req, res) => {
   const newPost = new Post({ title, meta, content, slug, author, tags });
 
   await newPost.save();
-
   res.json(newPost);
 };
