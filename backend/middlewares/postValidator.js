@@ -1,5 +1,6 @@
 const { check, validationResult } = require("express-validator");
 
+// Validator to check the data added and the error response
 exports.postValidator = [
   check("title").trim().not().isEmpty().withMessage("Post title is missing!"),
   check("content")
@@ -21,6 +22,8 @@ exports.postValidator = [
       return true;
     }),
 ];
+
+// Exports the error message
 
 exports.validate = (req, res, next) => {
   // Middleware for validating error

@@ -1,8 +1,9 @@
 const multer = require("multer");
 
-const storage = multer.diskStorage({});
+const storage = multer.diskStorage({}); // gives control over the files added to storage.
 
-const fileFilter = (req, file, cb) => {
+// Checking the image extension.
+const fileFilter = (req, file, cb) => { 
   if (!file.mimetype.includes("image")) {
     return cb("Invalid image format", false);
   }
